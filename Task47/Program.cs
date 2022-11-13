@@ -26,8 +26,8 @@ void FillArray(double[,] matr)
     {
         for (int j = 0; j < matr.GetLength(1); j++)
         {
-            matr[i,j] = new Random().Next(-100,100);
-            matr[i,j] = matr[i,j]/10;
+            matr[i, j] = new Random().Next(-100, 100);
+            matr[i, j] = matr[i, j] / 10;
         }
         Console.WriteLine();
     }

@@ -11,9 +11,9 @@ double[] result = ColumnAverage(matrix);
 
 Console.WriteLine("Среднее арифметическое каждого стобца:");
 for (int i = 0; i < result.GetLength(0); i++)
-    {
-        Console.Write($"{Math.Round(result[i], 2)}  ");
-    }
+{
+    Console.Write($"{Math.Round(result[i], 2)}  ");
+}
 
 void PrintArray(int[,] matr)
 {
@@ -33,7 +33,7 @@ void FillArray(int[,] matr)
     {
         for (int j = 0; j < matr.GetLength(1); j++)
         {
-            matr[i,j] = new Random().Next(10,100);
+            matr[i, j] = new Random().Next(10, 100);
         }
         Console.WriteLine();
     }
@@ -48,11 +48,11 @@ double[] ColumnAverage(int[,] matr)
         {
             avg[j] = avg[j] + matr[i, j];
         }
-//        Console.WriteLine();
+        //        Console.WriteLine();
     }
     for (int j = 0; j < matr.GetLength(1); j++)
-        {
-            avg[j] = avg[j]/(matr.GetLength(0));
-        }
-return avg;
+    {
+        avg[j] = avg[j] / (matr.GetLength(0));
+    }
+    return avg;
 }

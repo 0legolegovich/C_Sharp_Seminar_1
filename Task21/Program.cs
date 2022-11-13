@@ -15,13 +15,13 @@ int z2 = Convert.ToInt32(Console.ReadLine());
 double distance = default;
 distance = Distance(x1, y1, z1, x2, y2, z2);
 
-double Distance (int xa, int ya, int za, int xb, int yb, int zb)
-{   
-     double res = default;
+double Distance(int xa, int ya, int za, int xb, int yb, int zb)
+{
+    double res = default;
 
-    res = Math.Sqrt( (xb-xa)*(xb-xa) + (yb-ya)*(yb-ya) + (zb-za)*(zb-za) );
+    res = Math.Sqrt((xb - xa) * (xb - xa) + (yb - ya) * (yb - ya) + (zb - za) * (zb - za));
     res = Math.Round(res, 2, MidpointRounding.ToZero);
-	return res;
+    return res;
 }
 
 Console.WriteLine($"Расстояние между точками составляет {distance}");

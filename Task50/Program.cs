@@ -35,7 +35,7 @@ void FillArray(int[,] matr)
     {
         for (int j = 0; j < matr.GetLength(1); j++)
         {
-            matr[i,j] = new Random().Next(10,100);
+            matr[i, j] = new Random().Next(10, 100);
         }
         Console.WriteLine();
     }
