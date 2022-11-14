@@ -7,7 +7,9 @@ int dimension3 = Convert.ToInt32(Console.ReadLine());
 
 int[,,] array = new int[dimension1, dimension2, dimension3];
 
-int[] randomArray = RandomNonRepetetiveArray(dimension1, dimension2, dimension3); // Вспомогательный одномерный массив из случайных неповторяющихся чисел
+int[] randomArray = RandomNonRepetetiveArray(dimension1, dimension2, dimension3); // Вспомогательный одномерный массив 
+                                                                                  //из случайных неповторяющихся чисел
+
 FillArray(array, randomArray);          // Метод заполняет трехмерный массив случайными числами
 PrintArray(array);         // Метод выводит трехмерный массив из элементов вспомогательного одномерного массива      
 
@@ -28,7 +30,8 @@ void PrintArray(int[,,] matr)
     }
 }
 
-void FillArray(int[,,] matr, int[] rand)        // Заполняем трехмерный массив случайными неповторяющимися числами с помощью вспомогательного массива
+void FillArray(int[,,] matr, int[] rand)        // Заполняем трехмерный массив случайными неповторяющимися числами 
+                                                //с помощью вспомогательного массива
 {
     int m = 0;
     for (int i = 0; i < matr.GetLength(0); i++)
@@ -43,7 +46,8 @@ void FillArray(int[,,] matr, int[] rand)        // Заполняем трехм
     }
 }
 
-int[] RandomNonRepetetiveArray(int d1, int d2, int d3)      // Создаем вспомогательный одномерный массив с неповторяющимися двухзначными значениями
+int[] RandomNonRepetetiveArray(int d1, int d2, int d3)      // Создаем вспомогательный одномерный массив 
+                                                            //с неповторяющимися двухзначными значениями
 {
     int[] arr = new int[d1 * d2 * d3];
     for (int i = 0; i < arr.Length; i++)
