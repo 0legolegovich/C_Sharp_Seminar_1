@@ -20,8 +20,16 @@ FillMatrix(matrix2);
 PrintMatrix(matrix2);
 
 Console.WriteLine();
-int[,] result = MatrixMultiplication(matrix1, matrix2);
-PrintMatrix(result);
+if (IfMultiplicationAllowed(matrix1, matrix2))
+{
+    int[,] result = MatrixMultiplication(matrix1, matrix2);
+    PrintMatrix(result);
+}
+else
+{
+    Console.WriteLine("Введенные вами матрицы перемножить невозможно, см. Условие умножения матриц");
+}
+
 
 void PrintMatrix(int[,] matr)
 {
@@ -44,6 +52,12 @@ void FillMatrix(int[,] matr)
             matr[i, j] = new Random().Next(10, 100);
         }
     }
+}
+
+bool IfMultiplicationAllowed(int[,] matr1, int[,] matr2)
+{
+    if (matr1.GetLength(0) != matr2.GetLength(1)) return false;
+    return true;
 }
 
 int[,] MatrixMultiplication(int[,] matr1, int[,] matr2)
